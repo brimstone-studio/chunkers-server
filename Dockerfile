@@ -4,7 +4,7 @@ FROM cm2network/steamcmd:latest
 # The steamcmd image starts off logged in as the `steam` user
 
 # Install Chunkers server app
-RUN ~/steamcmd.sh +force_install_dir /home/steam/chunkers +login anonymous +app_update 1865350 +quit
+RUN /home/steam/steamcmd/steamcmd.sh +force_install_dir /home/steam/chunkers +login anonymous +app_update 1865350 +quit
 
 # Link `steamclient.so`
 RUN mkdir /home/steam/.steam/sdk64
