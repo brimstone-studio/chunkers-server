@@ -17,7 +17,7 @@ WORKDIR /home/steam/chunkers
 RUN export CHUNKERS_PORT=8086
 
 # Start the server
-CMD ["/home/steam/chunkers/update_and_start.sh"]
+CMD ["bash","/home/steam/chunkers/update_and_start.sh"]
 
 EXPOSE 27015/tcp \
 	 27015/udp \
