@@ -16,7 +16,13 @@ WORKDIR /home/steam/chunkers
 # Start the server
 CMD ["bash","/home/steam/chunkers/update_and_start.sh"]
 
+# Ports:
+# 27016 Query port
+# 8086 Game port
+# 9000 Steam port
 EXPOSE 27015/tcp \
-	 27015/udp \
-	 8086/udp \
-	 8086/tcp
+	   27015/udp \
+	   8086/udp \
+	   8086/tcp \
+	   9000/udp \
+       9000/tcp
