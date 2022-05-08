@@ -13,9 +13,6 @@ RUN ln -s /home/steam/steamcmd/linux64/steamclient.so /home/steam/.steam/sdk64/s
 # Change directory so it can find maps
 WORKDIR /home/steam/chunkers
 
-# Can't change the CHUNKERS_PORT env variable while running in docker
-RUN export CHUNKERS_PORT=8086
-
 # Start the server
 CMD ["bash","/home/steam/chunkers/update_and_start.sh"]
 
